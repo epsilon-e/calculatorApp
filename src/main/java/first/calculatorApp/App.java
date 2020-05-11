@@ -16,9 +16,9 @@ public class App
             System.out.println("");
             System.out.println("1) Addition");
             System.out.println("2) Subtraction");
-         //   System.out.println("3) Multiplication");
-         //   System.out.println("4) Division");
-            System.out.println("3) Exit");
+            System.out.println("3) Multiplication");
+            System.out.println("4) Division");
+            System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
             ch = reader.nextInt();
             if(ch==5)
@@ -47,7 +47,24 @@ public class App
                 num2 = reader.nextDouble();
                 System.out.println(num1-num2);
                 break;
-              
+                case 3:
+                System.out.println("Multiplication");
+                System.out.println("Enter two numbers");
+                System.out.print("Enter number 1: ");
+                num1 = reader.nextDouble();
+                System.out.print("Enter number 2: ");
+                num2 = reader.nextDouble();
+                System.out.println(num1*num2);
+                break;
+                case 4:
+                System.out.println("Division");
+                System.out.println("Enter two numbers");
+                System.out.print("Enter number 1: ");
+                num1 = reader.nextDouble();
+                System.out.print("Enter number 2: ");
+                num2 = reader.nextDouble();
+                System.out.println(num1/num2);
+                break;
                 default: System.out.println("Exiting program due to invalid input");
                 flag=1;
                 }
