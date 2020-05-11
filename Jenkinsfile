@@ -8,28 +8,11 @@ pipeline {
             }
         }
         
-        stage('Clean and Compile') { 
-            steps {
-            	
-            	sh 'mvn clean compile'
-            	
-            }
-        }
-		 stage('Testing Stage  ') { 
-            steps {
-            	
-            	sh 'mvn test'
-            	
-            }
-        }
-        stage('Package in JAR') { 
-            steps {
-            	
-                sh "mvn package"
-              
-            }  
-        }
-            
+      stage("maven clean & compile"){
+        def mvnHome =tool name: 'Maven-3', type: 'maven'
+        def mvnCMD ="${mvnHome}/bin/mvn"
+        sh "${mvnCMD} clean package"
+    }  
   
         stage('Build Image') {
       		steps {
