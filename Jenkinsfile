@@ -10,23 +10,23 @@ pipeline {
         
         stage('Clean and Compile') { 
             steps {
-            	withMaven(maven :'Maven-3'){
+            	
             	sh 'mvn clean compile'
-            	}
+            	
             }
         }
 		 stage('Testing Stage  ') { 
             steps {
-            	withMaven(maven :'Maven-3'){
+            	
             	sh 'mvn test'
-            	}
+            	
             }
         }
         stage('Package in JAR') { 
             steps {
-            	withMaven(maven :'Maven-3'){
+            	
                 sh "mvn package"
-               }
+              
             }  
         }
             
