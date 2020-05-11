@@ -34,7 +34,7 @@ pipeline {
         stage('Build Image') {
       		steps {
         		script {
-          			dockerImage = user/local/bin/docker.build "epsilon007/calculator_app" + ":latest"
+          			dockerImage = user/local/bin/docker.build("epsilon007/calculator_app" + ":latest")
         		}
       		}
     	}
